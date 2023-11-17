@@ -16,7 +16,7 @@ namespace Tyuiu.MusaevRS.Sprint5.Task0.V3
             Console.Title = "Спринт #5 | Выполнил Мусаев Р.Ш. | ПКТб-23-2";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
-            Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+            Console.WriteLine("* Тема: Класс File. Запись данных в текстовый файл                        *");
             Console.WriteLine("* Задание №0                                                              *");
             Console.WriteLine("* Вариант №3                                                              *");
             Console.WriteLine("* Выполнил: Мусаев Руслан Шамхалович | ПКТб-23-2                          *");

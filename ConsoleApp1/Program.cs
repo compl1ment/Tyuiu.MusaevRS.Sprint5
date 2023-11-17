@@ -11,17 +11,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[,] array = { { -9, 10, 2 }, { 4, -8, 1 }, { 5, 3, -6 } };
-            int rowSum = 0;
-
-            for (int j = 0; j < array.GetLength(1);j++)
+            string outputFile = "OutPutFileTask3.bin";
+            double x10 = -2;
+            double result10 = 2 * Math.Pow(x10, 2) + 3*x10 - 4; ;
+            using (BinaryWriter writer = new BinaryWriter(File.Open(outputFile, FileMode.Append)))
             {
-                rowSum -= array[2, j];
-                Console.WriteLine(array[2, j]);
-
+                Console.WriteLine(result10);
             }
-            File.WriteAllText("OutPutFileTask2.csv", rowSum.ToString());
-            Console.WriteLine(rowSum);
             Console.ReadKey();
         }
 

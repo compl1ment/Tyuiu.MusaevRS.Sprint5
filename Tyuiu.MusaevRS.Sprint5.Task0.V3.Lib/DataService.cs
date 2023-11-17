@@ -12,7 +12,7 @@ namespace Tyuiu.MusaevRS.Sprint5.Task0.V3.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}/OutPutFileTask0.txt";           
+            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";           
             double y = (-1.00/4.00)*(Math.Pow(x,3)-3*Math.Pow(x,2)+4);
             y = Math.Round(y, 3);
             File.WriteAllText(path, Convert.ToString(y));
