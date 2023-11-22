@@ -23,7 +23,7 @@ namespace Tyuiu.MusaevRS.Sprint5.Task5.V16.Lib
                         if ((Convert.ToDouble(line) > res))
                         {
                             res = (Convert.ToDouble(line));
-                        }      
+                        }       
                     }
                 }
             }
