@@ -11,13 +11,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string outputFile = "OutPutFileTask3.bin";
-            double x10 = -2;
-            double result10 = 2 * Math.Pow(x10, 2) + 3*x10 - 4; ;
-            using (BinaryWriter writer = new BinaryWriter(File.Open(outputFile, FileMode.Append)))
+            string text = File.ReadAllText(@"C:\DataSprint5\Task0.txt");
+            string[] strings = text.Split(',');
+            List<string> oddNumbers = new List<string>();
+            foreach(string str in strings)
             {
-                Console.WriteLine(result10);
+                if (int.TryParse(str.Trim(), out int number) && number % 3 == 0)
+                {
+                    oddNumbers.Add(str);
+                }
             }
+            File.WriteAllLines(@"C:\DataSprint5\Task0.txt", oddNumbers);
+            Console.WriteLine(String.Join("\n", oddNumbers));
             Console.ReadKey();
         }
 
