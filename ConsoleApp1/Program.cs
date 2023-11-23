@@ -11,18 +11,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string text = File.ReadAllText(@"C:\DataSprint5\Task0.txt");
-            string[] strings = text.Split(',');
-            List<string> oddNumbers = new List<string>();
-            foreach(string str in strings)
+            string content = File.ReadAllText(@"C:\DataSprint5\InPutDataFileTask5V16.txt");
+            string newContent = "";
+            foreach (char c in content)
             {
-                if (int.TryParse(str.Trim(), out int number) && number % 3 == 0)
+                if (!char.IsUpper(c))
                 {
-                    oddNumbers.Add(str);
-                }
+                    newContent += c;
+                }    
             }
-            File.WriteAllLines(@"C:\DataSprint5\Task0.txt", oddNumbers);
-            Console.WriteLine(String.Join("\n", oddNumbers));
+            File.WriteAllText(@"C:\DataSprint5\InPutDataFileTask5V16.txt", newContent);
+            Console.WriteLine(String.Join("\n", newContent));
             Console.ReadKey();
         }
 
